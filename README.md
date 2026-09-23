@@ -38,7 +38,4 @@ classDiagram
     }
 
 ```
-`# kirak(): void` – Kiosztja/megjeleníti a kártyákat 3 oszlopban
-`# melyik(): int` – Bekéri a felhasználótól, melyik oszlopban van a kártyája
-`# trukk(): void` – A trükk menete (3 ciklus / bepakolás)
-`+ main(args: String[]): void` – Program belépési pontja
+
