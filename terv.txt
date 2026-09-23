@@ -1,0 +1,19 @@
+kartyak    21 kartya
+pakli ◇----- lap                                               Program 
+           ertek:str/e                                          # kirak():void/string
+           szin:str/e                                           # melyik():int
+           konstrukt(sz,e)                                       main()
+            get/get                                             trukk()(3 hivas)
+           megj():str
+
+
+
+
+pakli
+# lapok[21]:lap
+konstrukt(intdb)
+konstrukt()
+get:copy
+kever():void
+feltolt():void - legyen de konstruktor meghívja?
+ezvolt():lap
