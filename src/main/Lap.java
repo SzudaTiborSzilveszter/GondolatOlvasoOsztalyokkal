@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package main;
 
-/**
- *
- * @author HuszárFruzsinaAnna(S
- */
 public class Lap {
-    
+    private String szin;
+    private String ertek;
+
+    public Lap(String szin, String ertek) {
+        this.szin = szin;
+        this.ertek = ertek;
+    }
+
+    public String getSzin() {
+        return szin;
+    }
+
+    public String getErtek() {
+        return ertek;
+    }
+
+    public String megj() {
+        return szin + "_" + ertek;
+    }
 }

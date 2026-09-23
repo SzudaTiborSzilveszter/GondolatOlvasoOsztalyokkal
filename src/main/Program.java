@@ -1,20 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package main;
 
-/**
- *
- * @author HuszárFruzsinaAnna(S
- */
+import java.util.Scanner;
+
 public class Program {
 
-    /**
-     * @param args the command line arguments
-     */
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Lap lap = new Lap("P", "Ász");
+
+        System.out.println(lap.megj());
+        System.out.println(lap.getSzin());
+        System.out.println(lap.getErtek());
     }
-    
 }
