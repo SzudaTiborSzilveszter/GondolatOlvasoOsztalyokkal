@@ -3,15 +3,38 @@ package main;
 import java.util.Scanner;
 
 public class Program {
-
     static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
-
-        Lap lap = new Lap("P", "Ász");
-
-        System.out.println(lap.megj());
-        System.out.println(lap.getSzin());
-        System.out.println(lap.getErtek());
+        Pakli pakli = new Pakli();
+        trukk(pakli);
+    }
+    private static void kirak(Pakli pakli) {
+        Lap[] lapok = pakli.getLapok();
+        for (int i = 0; i < 7; i++) {
+            System.out.printf(
+                    "%-12s %-12s %-12s%n",
+                    lapok[i * 3 + 1].megj(),
+                    lapok[i * 3 + 2].megj(),
+                    lapok[i * 3 + 3].megj()
+            );
+        }
+    }
+    private static int melyik() {
+        System.out.println("Válassza ki a kártya oszlopát! (1-3):");
+        int valasztas = sc.nextInt();
+        while (valasztas < 1 || valasztas > 3) {
+            System.out.println("Nem megfelelő a szám!");
+            System.out.println("Válassza ki a kártya oszlopát! (1-3):");
+            valasztas = sc.nextInt();
+        }
+        return valasztas;
+    }
+    private static void trukk(Pakli pakli) {
+        for (int i = 0; i < 3; i++) {
+            kirak(pakli);
+            int valasztas = melyik();
+            pakli.kever(valasztas);
+        }
+        System.out.println("Ez volt: " + pakli.ezVolt().megj());
     }
 }
